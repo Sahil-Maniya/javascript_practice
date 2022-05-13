@@ -1,51 +1,71 @@
- console.log('Hello World') 
- let name = "Sahil";
- console.log(Name);   
- let firstname = 'Sahil';
+ //console.log('Hello World') 
+ //let name = "Sahil";
+ //console.log(Name);   
+ //let firstname = 'Sahil';
  //let secondname = 'Maniya';
  //console.log(firstname,secondname);  
-//  const interestRate =0.3;
-//  interestRate = 1;
-//  console.log(interestRate);
-//  let name = 'Sahil'; //String Literel
-//  let age =    17; //Number Literel
-//  let isaproved= true; //Boolean Literel
-//  let firstname= undefined; //UNdefind Literel
-//  let selectedocean= null;    //Null Literel
-//    console.log(name,age,isaproved,firstname,selectedcolor);
+ //  const interestRate =0.3;
+ //  interestRate = 1;
+ //  console.log(interestRate);
+ //  let name = 'Sahil'; //String Literel
+ //  let age =    17; //Number Literel
+ //  let isaproved= true; //Boolean Literel
+ //  let firstname= undefined; //UNdefind Literel
+ //  let selectedocean= null;    //Null Literel
+ //    console.log(name,age,isaproved,firstname,selectedcolor);
 
- //object literel
+ //Object Literel
 
  let person = {
      name: 'Sahil',   
      age:17
  };
- console.log(person);
+//  console.log(person);
 
-     //dot notation is esier
+     //Dot Notation is esier
  person.name='john';
- console.log(person.name);
+//  console.log(person.name);
 
-      //bracket notation 
+      //Bracket Notation 
 let seletion = 'name';
 person[seletion]= 'Mary';
-console.log(person['name']);
+// console.log(person['name']);
 
-//Arry literel
+//Arry Literel
+let testArray ={
+    sam:'5',
+    sam2:6,
+    sam56:'test8',
+    sam9:['test1'],
+    sams:()=>{
+        console.log('methodofobject');
+    }
+}
+
+console.log(testArray.sams());
+let array = [1,2,3,'sam1', 'sam2', {
+    sam:'1'
+},['sams']];
+
+// console.log(array, testArray);
 let selectedcolor= ['red' , 'blue']; 
-selectedcolor[2]= 'green';
-console.log(selectedcolor);
+
+selectedcolor[3]='black'
+selectedcolor[2]='jambali lilo'
+
+console.log(selectedcolor[2]);
 
 //Function Literel
-       //performing a task
-function greet(name ,Lastname ) {
-    console.log('Hello '+ name +  Lastname);  
+       //Performing a task
+function greet(name, Lastname) {
+    square(5000000);
+     return 'hi  '+ name + ' ' + Lastname + ' sas';
 };
-greet('jhon' , 'Smith');
-greet('Marry' , 'Smith');
+console.log('function', greet('jhon' , 'Smith')); 
 
-     //calculating a value 
+      //Calculating a value 
 function square(Number) {
-    return Number*Number;   
+    let sam = Number*Number;   
+    console.log(sam);
+
 }
-console.log(square(1));

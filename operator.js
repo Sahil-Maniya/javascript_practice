@@ -1,13 +1,23 @@
-// let name = "Sahil";
-//  console.log('name');   
-//  let firstname = 'Sahil';
-//  let secondname = 'Maniya';
-//  console.log(firstname,secondname); 
+ //console.log('Hello World') 
+ //let name = "Sahil";
+ //console.log(Name);   
+ //let firstname = 'Sahil';
+ //let secondname = 'Maniya';
+ //console.log(firstname,secondname);  
+ //  const interestRate =0.3;
+ //  interestRate = 1;
+ //  console.log(interestRate);
+ //  let name = 'Sahil'; //String Literel
+ //  let age =    17; //Number Literel
+ //  let isaproved= true; //Boolean Literel
+ //  let firstname= undefined; //UNdefind Literel
+ //  let selectedocean= null;    //Null Literel
+ //    console.log(name,age,isaproved,firstname,selectedcolor);
 
 
- let  seletion= sum(10,20);
- function seletion(a,b) {
- sum =a*b;
+ let  selection= sum(10,20);
+ function  sum(c,d) {
+  sum =c*d;
 return sum;   
  }
  console.log(sum);
@@ -33,18 +43,18 @@ return sum;
      console.log(a*b);
 
                       //Exponentiation
-     console.log(a**b); // a**b =  10*5
+     console.log(a**b); // a**b =  10*5 (10*10*10*10*10 = 100000)
 
                      //Remember of divison
      console.log(a%b);
      
                     //incriment
      let x = 10
-     console.log(x++);
+     console.log('value of x', ++x);
  
                   //Decriment
      let y = 11
-     console.log(--y);
+     console.log('value of y', --y);
 
 
                                                                   // Assignment Oprators
@@ -70,7 +80,7 @@ let d = 30;
           //Exponentiation Assignment
     let m = 5;
     let n = 3 ;
-    console.log( m**=n );//m = m ** n
+    console.log( m**=n );//m = m ** n (5 * 5 * 5 = 125)
 
                                                           // Comparison oprator(boolien = true or false )
                                                     //Equal to    
@@ -87,6 +97,10 @@ let d = 30;
                                                     //Strict equal to (type + value )
      let g = 5;
      let h = '5';
+     let sam = '1'== true;
+
+
+     console.log('personal ex','1'=== true);
      console.log(g===h);//false  datatype check  
      let G = 5;
      let H = 5;

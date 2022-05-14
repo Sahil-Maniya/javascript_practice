@@ -1,18 +1,4 @@
- //console.log('Hello World') 
- //let name = "Sahil";
- //console.log(Name);   
- //let firstname = 'Sahil';
- //let secondname = 'Maniya';
- //console.log(firstname,secondname);  
- //  const interestRate =0.3;
- //  interestRate = 1;
- //  console.log(interestRate);
- //  let name = 'Sahil'; //String Literel
- //  let age =    17; //Number Literel
- //  let isaproved= true; //Boolean Literel
- //  let firstname= undefined; //UNdefind Literel
- //  let selectedocean= null;    //Null Literel
- //    console.log(name,age,isaproved,firstname,selectedcolor);
+
 
  //Object Literel
 
@@ -41,8 +27,8 @@ let testArray ={
         console.log('methodofobject');
     }
 }
-
-console.log(testArray.sams());
+let test = new Date();
+console.log(testArray);
 let array = [1,2,3,'sam1', 'sam2', {
     sam:'1'
 },['sams']];

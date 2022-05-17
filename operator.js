@@ -162,4 +162,17 @@ let d = 30;
      let AB = 5;
      let BC = 4;
      console.log(AB<=BC);//false  not less than and not equal to
-                                                               
+                                                               //Logocal Oprator
+            //  Logical AND(&&)
+            let highincome = true;
+            let loweincome = false;
+            console.log(highincome&&loweincome);
+            //Logical OR(||)
+            let hightemperature = true;
+            let lowtemperature = false;
+            console.log(hightemperature||lowtemperature); 
+            //Lgical NOT(!)
+            let highestincome = true;
+            let lowestincome  = false;
+           lowestincome=!highestincome
+            console.log('highestincome' , lowestincome);                               

@@ -3,6 +3,8 @@
 //if hour is between 12pm to 6 pm : Good Afternoon
 //otherwise : Good Evening
 
+
+
 let hour = 12;
 {
   if (hour >= 6 && hour < 12)
@@ -35,15 +37,39 @@ if (role === 'Guest') console.log('Guest');
 else if (role === 'Moderator') console.log('Moderator');
 else console.log('Unkown Users');
 
-// For Loop
-//for = (initial expresion ; condition ; increment expresion)  
+//For Loop
+//for = (initialzed expresion ; condition ; increment expresion)  
 
-// for (let i = 0; i <= 5; i++) {
-// if(i % 2!==0)console.log(i);
-// }
-
-let i = 0
-while(i<=5){
-console.log(i);
-      i++;
+for (let i = 0; i <= 5; i++) {
+console.log(i);                 //statement
 }
+
+ // while loop
+
+let y = 0         //initialzed expresion
+while(y<=5){      // condition
+console.log(y);    //statement
+      y++;        //increment expresion
+}
+//do...while loop
+
+let i = 0        //initialzed expresion
+do{
+if(i)console.log(i);   //statement
+i++;                   //increment expresion
+}
+while(i<=5);            // condition
+
+//Array with for loop
+
+let sam = [80, 93,102,110,255];
+
+for(let i = 0; i < sam.length; i++ )
+{
+  console.log(sam[i]);
+}
+
+  //Array example
+let select =['red', 'green'];
+select[2] = 'blue';
+console.log(select[0]);

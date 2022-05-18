@@ -3,7 +3,17 @@
 //if hour is between 12pm to 6 pm : Good Afternoon
 //otherwise : Good Evening
 
+let sams = 999;
+let den = 10000;
 
+let gem = false;
+let dfm = !gem;
+
+console.log('dfm', dfm);
+
+if (den !== sams) {
+  console.log('hu chu sams');
+}
 
 let hour = 12;
 {
@@ -40,7 +50,7 @@ else console.log('Unkown Users');
 //For Loop
 //for = (initialzed expresion ; condition ; increment expresion)  
 
-for (let i = 0; i <= 5; i++) {
+for (let i = 0; i <= 5; i++) {             //  () = parathisise
 console.log(i);                 //statement
 }
 
@@ -69,7 +79,54 @@ for(let i = 0; i < sam.length; i++ )
   console.log(sam[i]);
 }
 
+
   //Array example
+  let v = 2;
 let select =['red', 'green'];
 select[2] = 'blue';
-console.log(select[0]);
+console.log(select[v]);
+
+
+let r = [255,125,95,200,150,'dens'];
+
+printArray(r)
+function printArray(array){
+  for (let i = 0; i < array.length; i++) {
+    console.log('index ' +i + ' is value ' + array[i] +'.');
+  
+  }
+  console.log('All index is printed');
+}
+
+for(let i = 0;i <r.length;i++){
+    console.log(r[i]);
+  }
+
+   //For ... In  Loop 
+  
+const person = {
+  Name :'sahil',
+  age:18
+};
+for(let key in person)
+  console.log(person[key]);
+
+// For .. Of loop 
+
+  const colors = ['red','green','blue'];
+
+{for (const element of colors) 
+  console.log(element);
+}
+
+//Break and Continue
+
+let z= 0;
+while (z<=10 ) {
+  // if (z ===6) break;
+  if(z==5){
+   continue;
+    }
+  console.log(z);
+  z++;
+}

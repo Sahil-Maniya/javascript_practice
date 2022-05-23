@@ -115,18 +115,157 @@ for(let key in person)
 
   const colors = ['red','green','blue'];
 
-{for (const element of colors) 
+for (const element of colors) 
   console.log(element);
-}
+
 
 //Break and Continue
 
 let z= 0;
-while (z<=10 ) {
-  // if (z ===6) break;
-  if(z==5){
-   continue;
-    }
+while (z <= 10 ) {
+
+z++;
+  if (z === 3) continue;
+  
+  // if (z ===9) break;
+  
   console.log(z);
-  z++;
 }
+
+
+
+//Max Two Number
+
+let number = max(10,11);
+console.log(number);
+
+function max(a,b) {
+    // if (a>b)  return b;
+    // return a;
+
+   let c = (a<b) ? a:b;
+   return c;
+}
+
+//   landscape
+
+console.log(islandscape(5000,700));
+
+function islandscape(weight,height) {
+  let b = (weight<height);
+  return b;
+}
+
+
+//Fizz Buzz
+
+//Divisible by 3 => fizz
+//Divisible by 5 => buzz
+//Divisible by both 3 and 5 => fizzbuzz
+//Not Divisible by 3 or 5 => input
+// Not a Number => 'Not a Number'
+
+const output = fizzbuzz();
+console.log(output);
+
+function fizzbuzz(input) {
+  if (typeof input !=='number') 
+  return 'Not A Number';
+
+  if ((input % 3 ===0) && (input % 5 === 0 ))
+  return 'Fizz Buzz';
+
+  if(input % 3 === 0 )  
+  return 'Fizz';
+
+  if(input % 5 === 0)
+  return 'Buzz';
+
+  return input;
+  }
+
+//Demerit Point
+
+
+checkspeed(90);
+
+function checkspeed(speed) { 
+// const speedLimit =70;
+// const kmPerPoint = 5;
+
+
+  if(speed<=70)
+  console.log('Ok');
+
+  else
+   {
+    const point = Math.floor((speed - 70)  /5);
+    if (point>=12) 
+    console.log('license suspended');  
+    
+    else
+    console.log('Points',point);
+  }
+}
+
+
+//Even and Odd Number
+
+shownumbers(10);
+
+function shownumbers(limit) {
+
+for (let i = 0; i <= limit ; i++) {
+//  if (i % 2 ===0 ) console.log(i,'EVEN'); 
+//   else
+// console.log(i,'ODD'); 
+
+
+let select = (i % 2 === 0) ? "EVEN":"ODD";
+console.log(i,select);
+}
+}
+
+
+
+//String Properties
+
+let movie = {
+  Name : 'a',
+  year : 2022,
+  rating :4.5,
+  director :'b'
+};
+
+for (const key in movie) {
+   if (typeof movie [key] === number) 
+  console.log(key, movie[key]); 
+}
+
+//sum of multiple 3 and 5
+
+console.log(sum(10));
+
+function sum(limit) {
+  let sum = 0;
+for (let i= 0; i<=limit; i++) 
+if (i % 3 === 0 || i % 5 ===0 ) 
+  sum += i;
+
+  return sum; 
+}
+
+//stars
+
+ showstars(5);
+
+ function showstars(rows) {
+   for (let row = 1; row <= rows; row++) {
+     let pattern = '';
+     for (let i = 0; i < row; i++) 
+      pattern += '*';
+console.log(pattern);       
+     
+     
+   }
+ }

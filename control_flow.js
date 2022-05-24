@@ -165,13 +165,14 @@ function islandscape(weight,height) {
 //Not Divisible by 3 or 5 => input
 // Not a Number => 'Not a Number'
 
-const output = fizzbuzz();
+const output = fizzbuzz(100);
 console.log(output);
 
 function fizzbuzz(input) {
-  if (typeof input !=='number') 
+  
+  if (typeof input !== 'number') 
   return 'Not A Number';
-
+      
   if ((input % 3 ===0) && (input % 5 === 0 ))
   return 'Fizz Buzz';
 
@@ -189,7 +190,8 @@ function fizzbuzz(input) {
 
 checkspeed(90);
 
-function checkspeed(speed) { 
+function checkspeed(speed)   {
+  
 // const speedLimit =70;
 // const kmPerPoint = 5;
 
@@ -199,7 +201,7 @@ function checkspeed(speed) {
 
   else
    {
-    const point = Math.floor((speed - 70)  /5);
+    const point = Math.floor((speed - 70) / 5);
     if (point>=12) 
     console.log('license suspended');  
     
@@ -221,12 +223,10 @@ for (let i = 0; i <= limit ; i++) {
 // console.log(i,'ODD'); 
 
 
-let select = (i % 2 === 0) ? "EVEN":"ODD";
-console.log(i,select);
+let count = (i % 2 === 0) ? "EVEN":"ODD";
+console.log(i,count);
 }
 }
-
-
 
 //String Properties
 
@@ -244,28 +244,108 @@ for (const key in movie) {
 
 //sum of multiple 3 and 5
 
-console.log(sum(10));
-
+console.log(sum(15));
 function sum(limit) {
+  
   let sum = 0;
 for (let i= 0; i<=limit; i++) 
 if (i % 3 === 0 || i % 5 ===0 ) 
-  sum += i;
+  sum = sum + i;
 
   return sum; 
 }
 
-//stars
+//stars pattern
 
- showstars(5);
+ showstars1(5);
 
- function showstars(rows) {
+ function showstars1(rows) {
+  
    for (let row = 1; row <= rows; row++) {
      let pattern = '';
-     for (let i = 0; i < row; i++) 
+     for (let col = 1; col <= row; col++) 
       pattern += '*';
-console.log(pattern);       
-     
-     
+    console.log(pattern);         
    }
  }
+
+
+ showstars2(5);
+
+ function showstars2(rows) {
+  
+   for (let row = 1; row <= rows; row++) {
+     let pattern = '';
+   for (let col = 0; col <=rows; col++) 
+      pattern += '*';
+     console.log(pattern);         
+    }
+    
+ }
+
+
+
+ showstars3(5);
+
+ function showstars3(rows) {
+  
+   for (let row = 1; row <= rows; row++) {
+     let pattern = '';
+   for (let col = 1; col <=rows-row+1; col++) 
+      pattern += '*';
+     console.log(pattern);         
+    }
+    
+ }
+
+
+ showstars4(5);
+
+ function showstars4(rows) {
+  
+   for (let row = 1; row <= rows; row++) {
+     let pattern = '';
+   for (let col = 1; col <=row; col++) 
+      pattern += col;
+     console.log(pattern);         
+    }
+    
+ }
+
+
+showstars5(5);
+
+function showstars5(rows) {
+ 
+  for (let row = 1; row <= 2 * rows; row++) {
+      let totalcolsinrow = row > rows ? 2 * rows - row : row;
+    let pattern = '';
+  for (let col = 1; col <=totalcolsinrow; col++) 
+     pattern += '*';
+    console.log(pattern);         
+   }
+   
+}
+
+
+showstars28(5);
+
+function showstars28(rows) {
+ 
+  for (let row = 0; row <= 2 * rows; row++) {
+      let totalcolsinrow = row > rows ? 2 * rows - row : row;
+      let pattern = '';
+   
+    let noofspace = row - totalcolsinrow;
+  for (let s= 0;  s < noofspace; s++) {
+      let  pattern='';
+ 
+    }
+  for (let col = 0; col <=totalcolsinrow ; col++) {
+
+     pattern += '*';
+    }        
+     console.log(pattern); 
+   }
+   
+}

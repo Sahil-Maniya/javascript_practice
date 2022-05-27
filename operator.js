@@ -163,31 +163,31 @@ let d = 30;
      let BC = 4;
      console.log(AB<=BC);//false  not less than and not equal to
                                                                //Logical Oprator
-            //  Logical AND(&&)
-            let highincome = true;
-            let loweincome = false;
-            console.log(highincome&&loweincome);
+      //  Logical AND(&&)
+      let highincome = true;
+      let loweincome = false;
+      console.log(highincome&&loweincome);
 
-            //Logical OR(||)
-            let hightemperature = true;
-            let lowtemperature = false;
-            console.log(hightemperature||lowtemperature); 
+       //Logical OR(||)
+      let hightemperature = true;
+      let lowtemperature = false;
+      console.log(hightemperature||lowtemperature); 
 
-            //Lgical NOT(!)
-            let highestincome = true;
-            let lowestincome  = false;
-           lowestincome=!highestincome
-            console.log( lowestincome);                               
+      //Lgical NOT(!)
+      let highestincome = true;
+      let lowestincome  = false;
+      lowestincome=!highestincome
+      console.log( lowestincome);                               
                                                                 // (?) =  Ternary Operator
 
-             // (?)=  condition true
-            let age = 19;
-            let drive = age>= 18 ? 'Yes Drive': 'No Drive '   
-                                  //   true  :    false 
-            console.log(drive);
+       // (?)=  condition true
+      let age = 19;
+      let drive = age >=18?  'Yes Drive': 'No Drive '   
+                            //   true  :    false 
+      console.log(drive);
             
-             // (?)=  condition false
-             let Age = 13;
-             let checkkid = Age<=12 ? 'Yes You Kid' : 'Not You Kid '
-                                 //        true     :     false
-             console.log(checkkid);
+       // (?)=  condition false
+       let Age = 13;
+       let checkkid = Age<=12 ? 'Yes You Kid' : 'Not You Kid '
+                           //        true     :     false
+       console.log(checkkid);

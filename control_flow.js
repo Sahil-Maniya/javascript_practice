@@ -1,21 +1,6 @@
-// //hour
-// //if hour is between 6am to 12 pm : Good Morning
-// //if hour is between 12pm to 6 pm : Good Afternoon
-// //otherwise : Good Evening
 
-let sams = 999;
-let den = 10000;
-
-let gem = false;
-let dfm = !gem;
-
-console.log('dfm', dfm);
-
-if (den !== sams) {
-  console.log('hu chu sams');
-}
-
-let hour = 12;
+// If..Else
+let hour = 11;
 {
   if (hour >= 6 && hour < 12)
     console.log('Good Morning');
@@ -26,7 +11,7 @@ let hour = 12;
   else
     console.log('Good Evening');
 }
-//Swith...case
+//Swith...Case
 
 let role = 'Guest';
 
@@ -43,7 +28,10 @@ switch (role) {
 
 }
 
-if (role === 'Guest') console.log('Guest');
+if (role === 'Guest')
+{
+    console.log('Guest');
+} 
 else if (role === 'Moderator') console.log('Moderator');
 else console.log('Unkown Users');
 
@@ -55,14 +43,13 @@ for (let i = 0; i <= 5; i++) {             //  () = parathisise
 }
 
 // while loop
-
 let y = 0         //initialzed expresion
 while (y <= 5) {      // condition
   console.log(y);    //statement
   y++;        //increment expresion
 }
-//do...while loop
 
+//do...while loop
 let i = 0        //initialzed expresion
 do {
   if (i) console.log(i);   //statement
@@ -71,7 +58,6 @@ do {
 while (i <= 5);            // condition
 
 //Array with for loop
-
 let sam = [80, 93, 102, 110, 255];
 
 for (let i = 0; i < sam.length; i++) {
@@ -145,47 +131,46 @@ function max(a, b) {
   let c = (a < b) ? a : b;
   return c;
 }
+                                                           // EXERCISE
 
-//   landscape
+//  (1) - landscape or portrait
 
-console.log(islandscape(5000, 700));
+console.log(islandscape(500, 700));
 
-function islandscape(weight, height) {
+function islandscape( weight,height ) {
   let b = (weight < height);
   return b;
 }
 
+ //   (2) - Fizz Buzz
 
-//Fizz Buzz
-
-//Divisible by 3 => fizz
+// Divisible by 3 => fizz
 //Divisible by 5 => buzz
 //Divisible by both 3 and 5 => fizzbuzz
 //Not Divisible by 3 or 5 => input
 // Not a Number => 'Not a Number'
 
-const output = fizzbuzz(100);
+const output = fizzbuzz(15);
 console.log(output);
 
-function fizzbuzz(input) {
+function fizzbuzz(output) {
 
-  if (typeof input !== 'number')
+  if (typeof output !== 'number')
     return 'Not A Number';
 
-  if ((input % 3 === 0) && (input % 5 === 0))
+    if ((output % 3 === 0) && (output% 5 === 0))
     return 'Fizz Buzz';
-
-  if (input % 3 === 0)
-    return 'Fizz';
-
-  if (input % 5 === 0)
+    
+    if (output % 5 === 0)
     return 'Buzz';
-
-  return input;
+    
+    if (output % 3 === 0)
+    return 'Fizz';
+    
+  return output;
 }
 
-//Demerit Point
-
+// (3) - Demerit Point
 
 checkspeed(90);
 
@@ -199,17 +184,16 @@ function checkspeed(speed) {
     console.log('Ok');
 
   else {
-    const point = Math.floor((speed - 70) / 5);
-    if (point >= 12)
-      console.log('license suspended');
+      const point = Math.floor((speed - 70) / 5);
+      if (point >= 12)
+      console.log('License Suspended');
 
     else
-      console.log('Points', point);
-  }
+   console.log('Point :', point );
+    }
 }
 
-
-//Even and Odd Number
+// (4) - Even and Odd Number
 
 shownumbers(10);
 
@@ -221,34 +205,101 @@ function shownumbers(limit) {
     // console.log(i,'ODD'); 
 
 
-    let count = (i % 2 === 0) ? "EVEN" : "ODD";
+    let count = (i % 2 === 0) ? " :EVEN" : " :ODD";
     console.log(i, count);
-  }
+}
 }
 
-//String Properties
+    // (5) - Count Truthy
+    
+    const array = [0,null,undefined,'',2,3, 'sam'];
+    
+    console.log(counttruthy(array));
+    
+     function counttruthy(array) {
+       let count = 0;
+       for (let  value of array) 
+       if (value ) 
+       count++;
+       return count;   
+       }
+
+//  (6) - String Properties
 
 let movie = {
-  Name: 'a',
-  year: 2022,
-  rating: 4.5,
-  director: 'b'
+    Name: 'a',
+    year: 2022,
+    rating: 4.5,
+    director: 'b',
+    directorz: 'b'
 };
 
-for (const key in movie) {
-  if (typeof movie[key] === number)
-    console.log(key, movie[key]);
+showproperties(movie);
+
+function showproperties(movie) {
+    for (let key in movie) {
+        if (typeof movie[key] === 'string')
+        console.log(key, movie[key]);
+    }
 }
 
+//  (7) -  sum of multiple 3 and 5
 
+console.log(sum(15));
+function sum(limit) {
 
- //Prime Number
+  let sum = null;
+  for (let i = 0; i <= limit; i++)
 
-showprime(5);
+      if (i % 3 === 0 || i % 5 === 0)
+         sum = sum + i;
+
+  return sum;
+}
+
+//  (8) -  Grad
+
+const marks = [75,87,80];
+console.log(calculategrad(marks));
+
+function calculategrad(marks) {
+ let sum = 0;
+for (let mark of marks) {
+  sum = sum + mark;
+}
+  let average = sum / marks.length;
+
+  if (average < 30) return'Fail';
+  if (average < 40) return'E1';
+  if (average < 50) return'C2';
+  if (average < 60) return'C1';
+  if (average < 70) return'B2';
+  if (average < 80) return'B1';
+  if (average < 90) return'A2';
+  return'A1';  
+}
+
+// (9) -  stars pattern
+
+showstars1(5);
+
+function showstars1(rows) {
+
+  for (let row = 1; row <= rows; row++) {
+    let pattern = '';
+    for (let col = 1; col <= row; col++) {
+      pattern += '*';
+    }
+   console.log(pattern);         
+  }
+}
+ //  (10) - Prime Number
+
+showprime(20);
 function showprime(limit) {
   for(let number = 2; number<=limit; number++ ){
 
-     let isprime = true
+     let isprime = true;
     for (let factor = 2; factor < number; factor++) {
       if (number % factor === 0) 
       {
@@ -257,65 +308,15 @@ function showprime(limit) {
         
       }  
     }
-     if (isprime)
+      if (isprime)
       {
         console.log(number); 
       }
   }
 
-  
 } 
 
-// sum of multiple 3 and 5
-
-console.log(sum(15));
-function sum(limit) {
-
-  let sum = 0;
-  for (let i = 0; i <= limit; i++)
-    if (i % 3 === 0 || i % 5 === 0)
-      sum = sum + i;
-
-  return sum;
-}
-
-
- Grad
-
- const marks = [50,80,50];
-console.log(calculategrad(marks));
-
-function calculategrad(marks) {
- let sum = 0;
-for (let mark of marks) 
-  sum = sum + mark;
-  let average = sum / marks.length;
-
-  if (average > 30) return'Fail';
-  if (average > 40) return'E1';
-  if (average > 50) return'C2';
-  if (average > 60) return'C1';
-  if (average > 70) return'B2';
-  if (average > 80) return'B1';
-  if (average > 90) return'A2';
-  return'A1';  
-}
-//stars pattern
-
- showstars1(5);
-
- function showstars1(rows) {
-
-   for (let row = 1; row <= rows; row++) {
-     let pattern = '';
-     for (let col = 1; col <= row; col++) {
-       pattern += '*';
-     }
-    console.log(pattern);         
-   }
- }
-
-
+                                                       //   Star Pattern Exrcise
  showstars2(5);
 
  function showstars2(rows) {
@@ -345,7 +346,7 @@ for (let mark of marks)
  }
 
 
- showstars4(5);
+  showstars4(5);
 
  function showstars4(rows) {
 
@@ -377,20 +378,19 @@ function showstars5(rows) {
 
  showstars28(5);
 
-function showstars28(rows) {
-
-  for (let row = 0; row <= 2 * rows; row++) {
+ function showstars28(rows) {
+//  debugger
+  for (let row = 0; row < 2 * rows; row++) {
+    
     let totalcolsinrow = row > rows ? 2 * rows - row : row;
-    let pattern = '';
+    let pattern =  '';
 
-    let noofspace = row - totalcolsinrow;
+    let noofspace = rows - totalcolsinrow;
     for (let s = 0; s < noofspace; s++) {
-      pattern = '';
-
+      pattern +=  ' ';
     }
-    for (let col = 0; col <= totalcolsinrow; col++) {
-
-      pattern += '*';
+    for (let col = 0; col <totalcolsinrow; col++) {
+      pattern  += ' *';
     }
     console.log(pattern);
   }
@@ -402,10 +402,13 @@ function showstar31(n) {
   let orignalN = n;
   n = 2*n;
   for(let row = 0; row<=n; row++){
+  let res = ''
   for(let col = 0; col<=n; col++){
   let ateveryindex = orignalN - Math.min (Math.min(row , col), Math.min(n - row , n - col));
-  console.log(ateveryindex + " ");
-  }
-      console.log();
+  res = res + ateveryindex + " ";
+}
+console.log(res);
+      
   } 
 }
+

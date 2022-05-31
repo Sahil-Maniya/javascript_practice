@@ -12,15 +12,15 @@
      console.log(circle);
     }     
  };
- circle.draw('draw');
+ console.log(circle);
 
 //Factory Function
-function creatCircle1(radius) {   
+function creatCircle1(radius,location,isvisible) {   
     debugger 
 return{
     radius,
-    // location,
-    // isvisible,
+    //  location,
+    //  isvisible,
     draw :  function () {
     }     
 };
@@ -30,14 +30,17 @@ return{
 
     //Constructor Function
 
-    function Circle1(radius){
+    function Circle1(radius,location,_draw){
         this.radius = radius;
+        this.location = location
         this.draw = function(){
             console.log('draw');
         }
-    }
+    };
 
-    const another = new Circle1(1);
+
+    const another = new Circle1('1', 'abc','draw');
+    console.log(another);
 
     //  Dynamic Nature  of Object 
 
@@ -243,17 +246,77 @@ console.log(now1);
 
                                           //Exercise
 
-//Address
+//  Exerice (1)= Address
 
-let address = {
-  street :'a',
-  city : 'b',
-  zipcode :'c' 
+let ADdress = {
+  street:':a',
+  city:':b',
+  zipcode:':c' 
 };
 
 function showaddress(address) {
   for (const key in address) 
-     console.log(key ,address[key]);
+     console.log(key ,ADdress[key]);
     }
   
-showaddress(address);
+showaddress(Address);
+
+
+// Exericse  (2)= factory function & constructorfunction
+
+let address =  new Address ('a','b','c');
+console.log(address);
+//  Factory Function
+
+function Address(country,city,zipcode) {
+    
+    return {country,
+        city,
+        zipcode
+    };    
+}
+//   Exerice  (3)= Constructor Function
+function Address(country,city,zipcode) {
+    this.country = country,
+    this.city = city,
+    this.zipcode = zipcode   
+};
+//    Exerice (4)=  Blog Post    
+ let Post = {
+     Tital:'A',
+     Body : 'B',
+     Author:'C',
+     Comment:['This is beutiful book'],
+     isvalue: true,
+     Rating :4.5
+ };
+ console.log(Post);
+
+ //        Exerice   (5) =Constructor Function
+
+let blogpost = new blogPost('a','b','c');
+console.log(blogpost);
+ function blogPost(title,body,author) {
+     this.title = title;
+     this.body = body;
+     this.author = author;
+     this.view = 0;
+     this.comment = [];
+     this.isvalue = false; 
+ }
+
+ //     Exerice (6)=Price Range Object
+
+let priceRangers = [
+    { label : '$',tooltip:'Inexpensive',minPerPerson:0,maxPerPerson:10},
+    {label : '$$',tooltip:'Moderate',minPerPerson:11,maxPerPerson:20},
+    {label : '$$$',tooltip:'Expensive',minPerPerson:21,maxPerPerson:50}
+];
+let restaurent = [
+    {averagePerPerson: 5}
+]
+
+console.log(priceRangers);
+ 
+
+ 

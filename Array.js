@@ -99,5 +99,122 @@ console.log(slice);
 let Sem = [1,2,3,4];
 let sems = [5,6,7,8];
 
-let Sprad = [...Sem, 'a','b',...sems,'c','d'];
+let Sprad = [Sem, 'a','b',...sems,'c','d'];
 console.log(Sprad);
+
+// Iterating an Array
+
+let Numbersss = [1,2,3,4,5];
+
+for (const Number of Numbersss) {
+    console.log(Number);
+}
+Numbersss.forEach((Number,index, c) => console.log('samssh', index,Number, c));
+
+// Joined Array
+
+let number = [1,2,3,4];
+let Joined =  number . join(',');
+console.log(Joined);
+
+let message = 'This is my first message'
+let parts = message .split(' ');
+console.log(parts);
+
+let combined = parts. join ('-');
+console.log(combined);
+
+//Sorting Array - Example =1
+
+let Number1 = [2,3,1,5,4];
+Number1.sort();
+console.log(Number1);
+
+Number1.reverse();
+console.log(Number1);
+
+
+//Sorting Array - Example =2 
+
+let Cources1 = [
+    {id :1 , name: 'Node.js'},
+    {id : 2 , name : 'javascript'}
+];
+
+Cources1.sort (function(a,b){
+
+
+//a<b => -1
+//a>b => 1
+//a===b => 0
+let nameA = a.name.toUpperCase();
+let nameB = b.name.toLowerCase(); 
+if      (nameA<nameB) return -1
+else if (nameA>nameB) return 1
+return 0 
+})
+
+console.log(Cources1);
+
+// Testing the Element of an Array
+
+let number2= [1,2,3,4]
+
+//every()
+//some()
+ let allpositive = number2.every(function(value){
+ return value >=0;
+ });
+ console.log(allpositive);
+
+ //Filtering an Array
+
+ let number3 = [1,-1,-4,2,3,-5,4,5];
+
+let filtered = number3.filter(n => n >=0)
+console.log(filtered);
+
+//Mapping an Array
+let number4 = [2,3,-1,-7,4,5];
+
+
+let iteam = number4
+.filter(n=>n>=0)
+.map(n=>({value:n}))
+.filter(Object=>Object.value>= 1)
+.map(Object => Object.value);
+
+console.log(iteam);
+
+//Redusing an Array 
+let number5 = [1700,990,290,300];
+debugger
+//a=0,c=1 => a=1
+//a=1,c=-1 => a=0
+//a=0,c=2 => a=2
+//a=2,c=3 => a=5
+
+//a=0,c=1 => a=1
+//a=1,c=-1 => a=0
+//a=2,c=3 => a=5
+
+const  sum = number5.reduce(
+    (accumulator,currentValue) => accumulator + currentValue
+);
+// let sums = 0;
+// for (let n of number5)
+// sums= sums + n;
+
+console.log(sum);
+                                                       //Exercise
+
+   //Exercise - 1 = Array from Range
+let number6 = arrayfromRange(-1,7);
+console.log(number6);
+
+function arrayfromRange(min,max) {
+    let output = []
+    for(let i = min;i<= max;i++)
+    output.push(i);
+    return output;
+}
